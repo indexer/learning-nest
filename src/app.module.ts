@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { HttpService } from './axios.services';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserEntity } from './users/user.entity/user.entity';
+import { User } from './users/user.entity/user.entity';
 
 
 @Module({
@@ -15,7 +15,7 @@ import { UserEntity } from './users/user.entity/user.entity';
     username: 'root',
     password: 'root',
     database: 'mylearning',
-    entities: [UserEntity],
+    entities: [User],
     synchronize: true,
   })],
   controllers: [AppController],

@@ -11,7 +11,6 @@ export class AppController {
   }
 
 
-
   @Get("/quote/happiness")
   async getHappinessQuote(): Promise<string> {
     try {

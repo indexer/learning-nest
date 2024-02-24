@@ -8,7 +8,7 @@ import { HttpService } from './axios.services';
 @Module({
   imports: [],
   controllers: [AppController],
-  providers: [AppService,HttpService],
+  providers: [AppService, HttpService],
 
 })
 export class AppModule { }

@@ -7,7 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) { }
 
   @Get()
-  async getQuote(param : string): Promise<string> {
+  async getQuote(): Promise<string> {
     try {
       return this.appService.getQuote("happiness");  
     } catch (error) {

@@ -14,6 +14,7 @@ export class HttpService {
     // Add request interceptor to set headers
     this.axiosInstance.interceptors.request.use((config) => {
       // Add your headers here
+      config.headers['Content-Type'] = 'application/json'
       config.headers['X-Api-Key'] = process.env.APININJA;
       return config;
     });

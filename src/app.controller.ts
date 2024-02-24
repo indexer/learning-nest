@@ -7,11 +7,26 @@ export class AppController {
   constructor(private readonly appService: AppService) { }
 
   @Get()
-  async getQuote(): Promise<string> {
+  getQuote(): string {
+    return "Hello World"
+  }
+
+  @Get("/quote/happiness")
+  async getHappinessQuote(): Promise<string> {
     try {
       return this.appService.getQuote("happiness");  
     } catch (error) {
       throw new NotFoundException();
     }
   }
+
+  @Get("/quote/love")
+  async getLoveQuote(): Promise<string> {
+    try {
+      return this.appService.getQuote("love");
+    } catch (error) {
+      throw new NotFoundException();
+    }
+  }
+
 }

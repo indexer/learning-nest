@@ -1,15 +1,16 @@
 import { Controller, Get, NotFoundException, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 
-
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) { }
+  constructor(private readonly appService: AppService) {}
 
   @Get()
   getQuote(): string {
-    return "Hello World"
+    return "Hello World!"
   }
+
+
 
   @Get("/quote/happiness")
   async getHappinessQuote(): Promise<string> {
